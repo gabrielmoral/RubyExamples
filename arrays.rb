@@ -34,6 +34,10 @@ class MyArray
     result
   end
 
+  def array_of_fixnums?(array)
+    array.all? { |x| x.is_a? Fixnum }
+  end
+
 end
 
 my_array = MyArray.new([1, 2, 3]) 
@@ -44,4 +48,5 @@ puts my_array.sum(0) {|n| n ** 2 }
 puts my_array.length_finder(["Hello", "world"])
 puts my_array.sort_string("from am Valencia I")
 puts my_array.find_frequency("The world is amazing, the sea is awesome", "the")
+puts my_array.array_of_fixnums?([1, "hello", 2])
 
